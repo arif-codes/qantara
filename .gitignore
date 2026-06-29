@@ -1,0 +1,17 @@
+.DS_Store
+.env
+.env.*
+.venv/
+.pycache/
+__pycache__/
+*.py[cod]
+
+node_modules/
+reports/
+
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+*.sqlite-shm
+*.sqlite-wal

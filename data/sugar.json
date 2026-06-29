@@ -1,0 +1,141 @@
+{
+  "query": "sugar",
+  "lemma": "sugar",
+  "language": "English",
+  "summary": {
+    "display": "sugar",
+    "ipa": "/ˈʃʊɡər/",
+    "meaning": "crystalline sweet substance",
+    "confidence": 0.91,
+    "source": "prototype Wiktionary-derived graph"
+  },
+  "nodes": [
+    {
+      "id": "ar_sukkar",
+      "term": "سُكَّر",
+      "roman": "sukkar",
+      "language": "Arabic",
+      "period": "medieval",
+      "kind": "source",
+      "x": 13,
+      "y": 48
+    },
+    {
+      "id": "es_azucar",
+      "term": "azúcar",
+      "roman": "azucar",
+      "language": "Spanish",
+      "period": "modern",
+      "kind": "target",
+      "x": 42,
+      "y": 20
+    },
+    {
+      "id": "la_succarum",
+      "term": "succarum",
+      "roman": "succarum",
+      "language": "Medieval Latin",
+      "period": "medieval",
+      "kind": "bridge",
+      "x": 44,
+      "y": 48
+    },
+    {
+      "id": "fr_sucre",
+      "term": "sucre",
+      "roman": "sucre",
+      "language": "Old French",
+      "period": "medieval",
+      "kind": "bridge",
+      "x": 61,
+      "y": 48
+    },
+    {
+      "id": "en_sugar",
+      "term": "sugar",
+      "roman": "sugar",
+      "language": "English",
+      "period": "modern",
+      "kind": "focus",
+      "x": 82,
+      "y": 48
+    },
+    {
+      "id": "it_zucchero",
+      "term": "zucchero",
+      "roman": "zucchero",
+      "language": "Italian",
+      "period": "modern",
+      "kind": "target",
+      "x": 62,
+      "y": 78
+    }
+  ],
+  "edges": [
+    {
+      "from": "ar_sukkar",
+      "to": "es_azucar",
+      "relation": "borrowed_from",
+      "confidence": 0.96,
+      "evidence": "Arabic source with assimilated article"
+    },
+    {
+      "from": "ar_sukkar",
+      "to": "la_succarum",
+      "relation": "borrowed_from",
+      "confidence": 0.91,
+      "evidence": "medieval Latin bridge"
+    },
+    {
+      "from": "la_succarum",
+      "to": "fr_sucre",
+      "relation": "inherited_from",
+      "confidence": 0.89,
+      "evidence": "Romance chain"
+    },
+    {
+      "from": "fr_sucre",
+      "to": "en_sugar",
+      "relation": "borrowed_from",
+      "confidence": 0.93,
+      "evidence": "English loan path"
+    },
+    {
+      "from": "ar_sukkar",
+      "to": "it_zucchero",
+      "relation": "borrowed_from",
+      "confidence": 0.87,
+      "evidence": "Romance adaptation"
+    }
+  ],
+  "signals": [
+    {
+      "label": "Structured relation",
+      "value": "borrowed_from",
+      "weight": 0.42
+    },
+    {
+      "label": "Arabic lemma present",
+      "value": "سُكَّر",
+      "weight": 0.24
+    },
+    {
+      "label": "Reusable chain",
+      "value": "Spanish, English, Italian",
+      "weight": 0.17
+    },
+    {
+      "label": "Bridge languages",
+      "value": "Medieval Latin, Old French",
+      "weight": 0.08
+    }
+  ],
+  "suggestions": [
+    "coffee",
+    "saffron",
+    "zero",
+    "alchemy",
+    "cotton",
+    "arsenal"
+  ]
+}

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Qantara</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css?v=8" />
+  </head>
+  <body class="is-loading">
+    <div class="app-shell">
+      <header class="topbar" aria-label="Qantara header">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 96 72" focusable="false">
+              <path class="brand-mark__arch" d="M20 48 C31 18, 65 18, 76 48" />
+              <path class="brand-mark__deck" d="M24 48 H72" />
+              <circle class="brand-mark__node brand-mark__node--source" cx="20" cy="48" r="11" />
+              <circle class="brand-mark__node brand-mark__node--target" cx="76" cy="48" r="11" />
+              <text class="brand-mark__arabic" x="20" y="54" text-anchor="middle" lang="ar" dir="rtl">ق</text>
+              <text class="brand-mark__latin" x="76" y="54" text-anchor="middle">A</text>
+            </svg>
+          </div>
+          <div class="brand-copy">
+            <p class="eyebrow">Arabic influence explorer</p>
+            <h1>Qantara</h1>
+            <p class="brand-tagline">A bridge for borrowed words.</p>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <nav class="creator-links" aria-label="Creator links">
+            <a class="creator-link" href="https://github.com/arif-codes" target="_blank" rel="noreferrer">
+              <img src="./assets/github.svg" alt="" aria-hidden="true" />
+              GitHub
+            </a>
+            <a class="creator-link" href="https://uk.linkedin.com/in/arif-ahmed-1205bb191" target="_blank" rel="noreferrer">
+              <img src="./assets/linkedin.svg" alt="" aria-hidden="true" />
+              LinkedIn
+            </a>
+          </nav>
+          <form class="search" id="search-form">
+            <label class="sr-only" for="word-search">Search word</label>
+            <input id="word-search" name="word" value="sugar" autocomplete="off" />
+            <button class="icon-button" type="submit" aria-label="Search">
+              <span aria-hidden="true">⌕</span>
+            </button>
+          </form>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="graph-panel" aria-label="Etymology graph">
+          <div class="result-strip">
+            <div class="wordmark">
+              <span class="wordmark__term" id="focus-term">sugar</span>
+              <span class="wordmark__meta" id="focus-meta">Arabic source: sukkar</span>
+            </div>
+            <div class="score-pill" aria-label="confidence score" style="--score-width: 91%">
+              <span id="confidence-score">91%</span>
+              <small>confidence</small>
+            </div>
+          </div>
+
+          <div class="graph-canvas">
+            <div class="graph-scroll-track">
+              <svg id="edge-layer" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <path class="edge-line source-edge" d="M 13 48 C 27 42, 28 26, 42 20"></path>
+                <path class="edge-line source-edge" d="M 13 48 C 28 48, 29 48, 44 48"></path>
+                <path class="edge-line" d="M 44 48 C 52.5 48, 52.5 48, 61 48"></path>
+                <path class="edge-line" d="M 61 48 C 71.5 48, 71.5 48, 82 48"></path>
+                <path class="edge-line source-edge" d="M 13 48 C 34 53, 41 73, 62 78"></path>
+              </svg>
+              <div id="node-layer" class="node-layer" aria-label="Word lineage">
+                <button class="graph-node is-selected" data-kind="source" style="left: 13%; top: 48%" type="button">
+                  <span class="graph-node__term" lang="ar" dir="rtl">سُكَّر</span>
+                  <span class="graph-node__language">Arabic</span>
+                  <span class="graph-node__roman">sukkar</span>
+                </button>
+                <button class="graph-node" data-kind="target" style="left: 42%; top: 20%" type="button">
+                  <span class="graph-node__term">azúcar</span>
+                  <span class="graph-node__language">Spanish</span>
+                  <span class="graph-node__roman">azucar</span>
+                </button>
+                <button class="graph-node" data-kind="bridge" style="left: 44%; top: 48%" type="button">
+                  <span class="graph-node__term">succarum</span>
+                  <span class="graph-node__language">Medieval Latin</span>
+                  <span class="graph-node__roman">succarum</span>
+                </button>
+                <button class="graph-node" data-kind="bridge" style="left: 61%; top: 48%" type="button">
+                  <span class="graph-node__term">sucre</span>
+                  <span class="graph-node__language">Old French</span>
+                  <span class="graph-node__roman">sucre</span>
+                </button>
+                <button class="graph-node" data-kind="focus" style="left: 82%; top: 48%" type="button">
+                  <span class="graph-node__term">sugar</span>
+                  <span class="graph-node__language">English</span>
+                  <span class="graph-node__roman">sugar</span>
+                </button>
+                <button class="graph-node" data-kind="target" style="left: 62%; top: 78%" type="button">
+                  <span class="graph-node__term">zucchero</span>
+                  <span class="graph-node__language">Italian</span>
+                  <span class="graph-node__roman">zucchero</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline" id="timeline" aria-label="Selected etymology path">
+            <div class="timeline__source">
+              <span>Arabic</span>
+              <strong lang="ar" dir="rtl">سُكَّر</strong>
+            </div>
+            <div>
+              <span>Spanish</span>
+              <strong>azúcar</strong>
+            </div>
+            <div>
+              <span>English</span>
+              <strong>sugar</strong>
+            </div>
+            <div>
+              <span>Italian</span>
+              <strong>zucchero</strong>
+            </div>
+          </div>
+        </section>
+
+        <aside class="inspector" aria-label="Evidence inspector">
+          <section class="inspector-section selected-node">
+            <p class="panel-kicker">Selected node</p>
+            <h2 id="selected-term" lang="ar" dir="rtl">سُكَّر</h2>
+            <dl>
+              <div>
+                <dt>Language</dt>
+                <dd id="selected-language">Arabic</dd>
+              </div>
+              <div>
+                <dt>Romanization</dt>
+                <dd id="selected-roman">sukkar</dd>
+              </div>
+              <div>
+                <dt>Role</dt>
+                <dd id="selected-role">source</dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="inspector-section">
+            <div class="section-title">
+              <p class="panel-kicker">Rule score</p>
+              <strong id="score-label">0.91</strong>
+            </div>
+            <div class="score-bars" id="score-bars"></div>
+          </section>
+
+          <section class="inspector-section">
+            <div class="section-title">
+              <p class="panel-kicker">Edges</p>
+              <strong id="edge-count">5</strong>
+            </div>
+            <div class="edge-table" id="edge-table"></div>
+          </section>
+
+          <section class="inspector-section suggestions" title="This is a non exhaustive list, just some that I found interesting.">
+            <p class="panel-kicker" title="This is a non exhaustive list, just some that I found interesting.">Suggested words</p>
+            <div id="suggestions"></div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script src="./data/sugar.js?v=8"></script>
+    <script src="./app.js?v=8"></script>
+  </body>
+</html>
